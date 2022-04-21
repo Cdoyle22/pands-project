@@ -7,3 +7,7 @@
 # Downloaded dataset in csv format from https://data.mendeley.com/datasets/7xwsksdpy3/1
 
 #Author: Ciara Doyle
+
+
+# https://code.visualstudio.com/docs/datascience/data-science-tutorial 
+# shows how to use VS Code and Jupyter notebooks to view data
