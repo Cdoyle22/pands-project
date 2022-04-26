@@ -1,22 +1,7 @@
-# Write a program that:
-# 1. Outputs a summary of each variable to a single text file,
-# 2. Saves a histogram of each variable to png files, and
-# 3. Outputs a scatter plot of each pair of variables.
-# 4. Performs any other analysis you think is appropriate
-
-#4.1 Demonstrate the differences in each variable for each class of iris.
-#4.2 Write average petal length, width, sepal length, width of each class to a text file.
-
-
+# %% [markdown]
 
 #Author: Ciara Doyle
 
-
-# https://code.visualstudio.com/docs/datascience/data-science-tutorial 
-# shows how to use VS Code and Jupyter notebooks to view data
-
-
-# %% [markdown]
 # Write a program that:
 # 3.1 Outputs a summary of each variable to a single text file
 # 
@@ -85,20 +70,69 @@ print ('\r\n', file = open (filelocation, "a"))
 import matplotlib.pyplot as plt
 from matplotlib import colors 
 
-#Set the figure size
+# %% [markdown]
+# Set the figure size:
+
+# %%
 plt.rcParams["figure.figsize"] = [10.00, 10.00]
 plt.rcParams["figure.autolayout"] = True
 
+# %% [markdown]
+# Plot the histogram and choose colour, Include a title and labels, and save the histogram:
 
-# Plot the histogram
+# %%
 plt.hist(data['sepal_length'], color = 'pink')
-
-
-#Save the histogram
 plt.title ('Sepal Length')
 plt.xlabel ('Sepal length')
 plt.ylabel ('Count')
 plt.savefig('sepal_length.png')
+
+plt.show()
+
+# %% [markdown]
+# Repeat for each variable:
+
+# %%
+plt.rcParams["figure.figsize"] = [10.00, 10.00]
+plt.rcParams["figure.autolayout"] = True
+plt.hist(data['sepal_width'], color = 'blue')
+plt.title ('sepal_width')
+plt.xlabel ('sepal_width')
+plt.ylabel ('Count')
+plt.savefig('sepal_width.png')
+
+plt.show()
+
+# %%
+plt.rcParams["figure.figsize"] = [10.00, 10.00]
+plt.rcParams["figure.autolayout"] = True
+plt.hist(data['petal_length'], color = 'purple')
+plt.title ('petal_length')
+plt.xlabel ('petal_length')
+plt.ylabel ('Count')
+plt.savefig('petal_length.png')
+
+plt.show()
+
+# %%
+plt.rcParams["figure.figsize"] = [10.00, 10.00]
+plt.rcParams["figure.autolayout"] = True
+plt.hist(data['petal_width'], color = 'red')
+plt.title ('petal_width')
+plt.xlabel ('petal_width')
+plt.ylabel ('Count')
+plt.savefig('petal_width.png')
+
+plt.show()
+
+# %%
+plt.rcParams["figure.figsize"] = [10.00, 10.00]
+plt.rcParams["figure.autolayout"] = True
+plt.hist(data['class'], color = 'green')
+plt.title ('class')
+plt.xlabel ('class')
+plt.ylabel ('Count')
+plt.savefig('class.png')
 
 plt.show()
 
@@ -109,6 +143,9 @@ plt.show()
 # b) petal length and petal width
 # 
 # There are 150 plotted points for each pair of variables 
+
+# %% [markdown]
+# 3.3.a) Output a scatter plot of sepal length and width:
 
 # %%
 import seaborn as sns
@@ -127,6 +164,27 @@ plt.title ('Scatter plot of each pair of Variables in iris dataset')
 plt.xlabel ('Sepal length')
 plt.ylabel ('Sepal_Width')
 plt.show()
+
+# %% [markdown]
+# 3.3.b) Output a scatter plot of petal length and width:
+
+# %%
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+x = data['petal_length']
+y = data['petal_width']
+
+z= data['class']
+
+sns.scatterplot(x, y, c= 'purple', hue = z)
+
+plt.legend(bbox_to_anchor=(1, 1), loc=2)
+
+plt.title ('Scatter plot of each pair of Variables in iris dataset')
+plt.xlabel ('Petal length')
+plt.ylabel ('Petal Width')
+plt.show() 
 
 # %% [markdown]
 # 4.1 Demonstrate the differences in each variable for each class of iris.
@@ -149,6 +207,12 @@ plot = sns.FacetGrid(data, hue="class")
 plot.map(sns.histplot, "petal_width").add_legend()
 
 plt.show()
+
+
+# %% [markdown]
+# 4.2 Write average petal length, petal width, sepal length, sepal width of each class to a text file.
+
+# %%
 
 
 
