@@ -31,8 +31,9 @@ petal_length
 petal_width
 class
 
+In order to analyse the data, it must first be added to the repository.
 
 This dataset is  availabe for download here: https://archive.ics.uci.edu/ml/datasets/iris
 and in CSV format here: https://data.mendeley.com/datasets/7xwsksdpy3/1
 
-
+It can then be analysed using Jupyter data variables and any empty cells or discrepencies in the data can be amended. In this dataset this did not to be done. r On investigating the scatter plots and histograms, it becomes clear that the strongest defining characteristic of the iris flower to determine which species it belongs to, is the petal length and width. Clusters can be clearly observed when reviewed. 
