@@ -1,7 +1,4 @@
 # %% [markdown]
-
-#Author: Ciara Doyle
-
 # Write a program that:
 # 3.1 Outputs a summary of each variable to a single text file
 # 
@@ -208,9 +205,6 @@ plot.map(sns.histplot, "petal_width").add_legend()
 
 plt.show()
 
-
-# %% [markdown]
-# 4.2 Write average petal length, petal width, sepal length, sepal width of each class to a text file.
 
 # %%
 

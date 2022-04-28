@@ -27,7 +27,7 @@ petal_width
 class
 
 
-This file is  availabe for download here: https://archive.ics.uci.edu/ml/datasets/iris
+This dataset is  availabe for download here: https://archive.ics.uci.edu/ml/datasets/iris
 and in CSV format here: https://data.mendeley.com/datasets/7xwsksdpy3/1
 
 
